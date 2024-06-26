@@ -33,9 +33,7 @@ class _FilterDetailsState extends State<FilterDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    _details = FilterFactory.filterAttributes(filterName: widget.filter.name)
-            ?.toList() ??
-        [];
+    _details = FilterFactory.filterAttributes(filterName: widget.filter.name)?.toList() ?? [];
     _loadFilterInfo();
   }
 
@@ -69,11 +67,11 @@ class _FilterDetailsState extends State<FilterDetailsScreen> {
                 heroTag: null,
                 child: const Icon(Icons.videocam),
                 onPressed: () {
+                  //Done
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          FilterResultScreen(filter: _filter, video: true),
+                      builder: (context) => FilterResultScreen(filter: _filter, video: true),
                     ),
                   );
                 },
@@ -103,8 +101,7 @@ class _FilterDetailsState extends State<FilterDetailsScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>
-                          FilterPreviewScreen(filter: _filter),
+                      builder: (context) => FilterPreviewScreen(filter: _filter),
                     ),
                   );
                 },
